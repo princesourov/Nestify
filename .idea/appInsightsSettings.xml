@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.MSInnovation.nestify" />
+                  <option name="mobileSdkAppId" value="1:116840195614:android:f9d7a33f75ef84776e300f" />
+                  <option name="projectId" value="nestify-2c6fd" />
+                  <option name="projectNumber" value="116840195614" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

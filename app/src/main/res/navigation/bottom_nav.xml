@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.MSInnovation.nestify.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/orderTrackerFragment"
+        android:name="com.MSInnovation.nestify.OrderTrackerFragment"
+        android:label="fragment_order_tracker"
+        tools:layout="@layout/fragment_order_tracker" />
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="com.MSInnovation.nestify.ToolsFragment"
+        android:label="fragment_tools"
+        tools:layout="@layout/fragment_tools" />
+</navigation>

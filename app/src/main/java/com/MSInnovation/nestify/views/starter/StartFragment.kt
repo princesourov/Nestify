@@ -13,9 +13,6 @@ class StartFragment : BaseFragment<FragmentStartBinding>(FragmentStartBinding::i
             btnLogin.setOnClickListener {
                 findNavController().navigate(R.id.action_startFragment_to_loginFragment)
             }
-            btnRegister.setOnClickListener{
-                findNavController().navigate(R.id.action_startFragment_to_registerFragment)
-            }
         }
     }
     override fun allObserver() {

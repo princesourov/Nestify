@@ -1,6 +1,6 @@
 package com.MSInnovation.nestify.di
 
-import com.epikason.ozzoapp.data.repository.AuthRepository
+import com.MSInnovation.nestify.data.repository.AuthRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module

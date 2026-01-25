@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/orderTrackerFragment"
+        android:icon="@drawable/ordertracker"
+        android:title="Order Tracker" />
+    <item
+        android:id="@+id/toolsFragment"
+        android:icon="@drawable/others"
+        android:title="Tools" />
+
+
+</menu>

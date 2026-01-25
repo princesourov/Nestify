@@ -5,4 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="android:windowIsTranslucent">true</item>
     </style>
+    <style name="Theme.Nestify.App.Ber" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/primary_color</item>
+        <item name="colorSecondary">#FFFFFF</item>
+    </style>
 </resources>

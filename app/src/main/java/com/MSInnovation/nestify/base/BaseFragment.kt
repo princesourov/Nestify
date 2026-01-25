@@ -1,4 +1,5 @@
 package com.MSInnovation.nestify.base
+
 import android.app.Dialog
 import android.graphics.Color
 import android.os.Bundle
