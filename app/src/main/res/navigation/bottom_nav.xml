@@ -12,12 +12,16 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/orderTrackerFragment"
-        android:name="com.MSInnovation.nestify.OrderTrackerFragment"
+        android:name="com.MSInnovation.nestify.views.dashboard.orderTracker.OrderTrackerFragment"
         android:label="fragment_order_tracker"
         tools:layout="@layout/fragment_order_tracker" />
     <fragment
         android:id="@+id/toolsFragment"
         android:name="com.MSInnovation.nestify.views.dashboard.addOrder.ToolsFragment"
         android:label="fragment_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_tools" >
+        <action
+            android:id="@+id/action_toolsFragment_to_orderTrackerFragment"
+            app:destination="@id/orderTrackerFragment" />
+    </fragment>
 </navigation>

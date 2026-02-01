@@ -43,7 +43,6 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                     loadingDialog?.dismiss()
                     Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
                 }
-
                 is DataState.Loading -> {
                     loadingDialog?.show()
                 }
