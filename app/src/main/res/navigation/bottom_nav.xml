@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.MSInnovation.nestify.HomeFragment"
+        android:name="com.MSInnovation.nestify.views.dashboard.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_order_tracker" />
     <fragment
         android:id="@+id/toolsFragment"
-        android:name="com.MSInnovation.nestify.ToolsFragment"
+        android:name="com.MSInnovation.nestify.views.dashboard.addOrder.ToolsFragment"
         android:label="fragment_tools"
         tools:layout="@layout/fragment_tools" />
 </navigation>
