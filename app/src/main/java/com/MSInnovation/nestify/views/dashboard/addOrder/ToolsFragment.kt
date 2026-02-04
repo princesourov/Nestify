@@ -34,16 +34,18 @@ class ToolsFragment : BaseFragment<FragmentToolsBinding>(FragmentToolsBinding::i
         observeAddData()
 
     }
+
     private fun setupDropdowns() {
-        with(binding){
+        with(binding) {
             spinnerPlatform.setAdapter(
-                ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, Data.platform))
+                ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, Data.platform)
+            )
             spinnerDistrict.setAdapter(
-                ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, Data.districts))
+                ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, Data.districts)
+            )
             spinnerSellType.setAdapter(
-                ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, Data.sellType))
-            spinnerDeliveryStatus.setAdapter(
-                ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, Data.deliveryStatus))
+                ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, Data.sellType)
+            )
         }
     }
 
@@ -72,35 +74,19 @@ class ToolsFragment : BaseFragment<FragmentToolsBinding>(FragmentToolsBinding::i
                 spinnerDistrict.isEmpty()
                 spinnerSellType.isEmpty()
                 etCustomerLocation.isEmpty()
-                etParcelsId.isEmpty()
-                spinnerDeliveryStatus.isEmpty()
                 etPhone.isEmpty()
                 etBuyPrice.isEmpty()
                 etSellPrice.isEmpty()
-                etDelivaryCharge.isEmpty()
                 etTakenCharge.isEmpty()
                 etPackaging.isEmpty()
-                etAdsCost.isEmpty()
 
-                if (!etDate.isEmpty() && !spinnerPlatform.isEmpty() && !etCustomerName.isEmpty() && !etProductName.isEmpty() && !spinnerDistrict.isEmpty() &&
-                    !spinnerSellType.isEmpty() && !etCustomerLocation.isEmpty() && !etParcelsId.isEmpty() && !spinnerDeliveryStatus.isEmpty() && !etPhone.isEmpty()
-                    && !etBuyPrice.isEmpty() && !etSellPrice.isEmpty() && !etDelivaryCharge.isEmpty() && !etTakenCharge.isEmpty()
-                    && !etPackaging.isEmpty() && !etAdsCost.isEmpty())
-                {
-                    val buyPrice = binding.etBuyPrice.extract().toDoubleOrNull() ?: 0.0
-                    val deliveryCharge = binding.etDelivaryCharge.extract().toDoubleOrNull() ?: 0.0
-                    val sellPrice = binding.etSellPrice.extract().toDoubleOrNull() ?: 0.0
-                    val takenCharge = binding.etTakenCharge.extract().toDoubleOrNull() ?: 0.0
-                    val packaging = binding.etPackaging.extract().toDoubleOrNull() ?: 0.0
-                    val adsCost = binding.etAdsCost.extract().toDoubleOrNull() ?: 0.0
-
-                    val totalCost = buyPrice + deliveryCharge + packaging + adsCost
-                    val totalSell = sellPrice + takenCharge
-
-                    val netProfit = totalSell - totalCost
-                    val profitPercent = if (totalCost != 0.0) (netProfit / totalCost) * 100 else 0.0
+                if (!etDate.isEmpty() && !spinnerPlatform.isEmpty() && !etCustomerName.isEmpty() && !etProductName.isEmpty()
+                    && !spinnerDistrict.isEmpty() && !spinnerSellType.isEmpty() && !etCustomerLocation.isEmpty() && !etPhone.isEmpty() && !etBuyPrice.isEmpty()
+                    && !etSellPrice.isEmpty() && !etTakenCharge.isEmpty() && !etPackaging.isEmpty()
+                ) {
 
                     val orderData = OrderData(
+                        binding.etOrderNo.extract(),
                         binding.etDate.extract(),
                         binding.spinnerPlatform.extract(),
                         binding.etCustomerName.extract(),
@@ -108,17 +94,17 @@ class ToolsFragment : BaseFragment<FragmentToolsBinding>(FragmentToolsBinding::i
                         binding.spinnerDistrict.extract(),
                         binding.spinnerSellType.extract(),
                         binding.etCustomerLocation.extract(),
-                        binding.etParcelsId.extract(),
-                        binding.spinnerDeliveryStatus.extract(),
+                        "0000000000",
+                        "In Review",
                         binding.etPhone.extract(),
                         binding.etBuyPrice.extract(),
                         binding.etSellPrice.extract(),
-                        binding.etDelivaryCharge.extract(),
+                        "00",
                         binding.etTakenCharge.extract(),
                         binding.etPackaging.extract(),
-                        binding.etAdsCost.extract(),
-                        netProfit.toString(),
-                        String.format("%.2f", profitPercent)
+                        "00",
+                        "00",
+                        "00",
                     )
                     viewModel.addOrderData(orderData)
                 }
@@ -134,6 +120,7 @@ class ToolsFragment : BaseFragment<FragmentToolsBinding>(FragmentToolsBinding::i
                     loadingDialog?.dismiss()
                     Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                 }
+
                 is DataState.Success -> {
                     loadingDialog?.dismiss()
 

@@ -23,7 +23,6 @@ class AppDashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAppDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.btnLogout.setOnClickListener {
             val alert = AlertDialog.Builder(this)
                 .setTitle("Log out?")

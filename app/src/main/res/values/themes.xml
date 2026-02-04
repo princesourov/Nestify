@@ -4,11 +4,8 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@color/primary_color</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
-    <style name="Theme.Nestify" parent="Base.Theme.Nestify" />
-    <style name="Theme.Nestify.App.Ber" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/primary_color</item>
-        <item name="colorSecondary">#FFFFFF</item>
-    </style>
 </resources>

@@ -6,12 +6,12 @@
         android:title="Home" />
     <item
         android:id="@+id/orderTrackerFragment"
-        android:icon="@drawable/ordertracker"
+        android:icon="@drawable/ic_orderlist"
         android:title="Order Tracker" />
     <item
         android:id="@+id/toolsFragment"
-        android:icon="@drawable/others"
-        android:title="Tools" />
+        android:icon="@drawable/ic_addorder"
+        android:title="Add Order" />
 
 
 </menu>
