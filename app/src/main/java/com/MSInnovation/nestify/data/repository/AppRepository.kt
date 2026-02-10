@@ -11,20 +11,14 @@ import javax.inject.Inject
 class AppRepository @Inject constructor(
     private val db: FirebaseFirestore
 ) : AppService {
-
-
     override fun orderData(user: OrderData): Task<Void> {
         return db.collection(Nodes.ORDER_DATA)
             .document()
             .set(user)
     }
-
-
     override fun getDataRequest(): Task<QuerySnapshot> {
         return db.collection(Nodes.ORDER_DATA).get()
     }
-
-
     override fun updateOrderData(docId: String, pid: String, status: String, dCharge: String, adsCost: String, profit: String, profitPercent: String): Task<Void> {
         return db.collection(Nodes.ORDER_DATA)
             .document(docId)
