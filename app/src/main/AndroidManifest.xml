@@ -15,12 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.Nestify">
         <activity
+            android:name=".views.moreOptions.MoreOptionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.dashboard.orderTracker.customerDetails.CustomerDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".views.dashboard.AppDashboardActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".views.starter.MainActivity"
             android:exported="true">

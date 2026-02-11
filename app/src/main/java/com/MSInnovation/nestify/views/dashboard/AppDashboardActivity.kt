@@ -3,6 +3,7 @@ package com.MSInnovation.nestify.views.dashboard
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -21,6 +22,7 @@ class AppDashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding = ActivityAppDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnLogout.setOnClickListener {

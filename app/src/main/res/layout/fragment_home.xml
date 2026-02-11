@@ -9,17 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg"
         android:orientation="vertical"
         android:padding="@dimen/_10sdp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/primary_color"
-            android:textSize="@dimen/_25ssp"
-            android:textStyle="bold"
-            android:fontFamily="@font/baloo"
-            android:layout_gravity="center"
-            android:text="Dashboard"/>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardview"
@@ -31,81 +23,104 @@
             app:strokeColor="@color/primary_color"
             app:strokeWidth="@dimen/_3sdp">
 
-            <TextView
+            <LinearLayout
                 android:id="@+id/tvTFDashboard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primary_color"
-                android:textSize="@dimen/_20ssp"
-                android:textStyle="bold"
-                android:fontFamily="@font/baloo"
                 android:layout_gravity="center"
-                android:text="Tap for dashboard"/>
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:text="Tap for dashboard"
+                    android:textColor="@color/primary_color"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/dashboard"
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_15sdp"
-                android:padding="@dimen/_5sdp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <FrameLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_margin="@dimen/_15sdp"
+                    android:padding="@dimen/_5sdp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Profit"
-                        android:textColor="@color/primary_color"
-                        android:textSize="@dimen/_18sdp"
-                        android:textStyle="bold" />
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tvTotalProfit"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Profit"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/_18sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTotalProfit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00.00"
+                            android:textColor="#3EB643"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="00.00"
-                        android:textColor="#3EB643"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Sell"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/_18sdp"
+                            android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Total Sell"
-                        android:textColor="@color/primary_color"
-                        android:textSize="@dimen/_18sdp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvTotalSell"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00.00"
+                            android:textColor="#3EB643"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/tvTotalSell"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="00.00"
-                        android:textColor="#3EB643"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-            </FrameLayout>
+                </FrameLayout>
             </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_50sdp">
+
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </ScrollView>

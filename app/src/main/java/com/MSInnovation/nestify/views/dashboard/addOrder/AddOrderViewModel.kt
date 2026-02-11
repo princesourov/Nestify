@@ -18,7 +18,6 @@ class AddOrderViewModel @Inject constructor(
     private val _addOrderResponse = MutableLiveData<DataState<OrderData>>()
     val addOrderResponse: LiveData<DataState<OrderData>> = _addOrderResponse
 
-
     private val _updateOrderResponse = MutableLiveData<DataState<String>>()
     val updateOrderResponse: LiveData<DataState<String>> = _updateOrderResponse
 

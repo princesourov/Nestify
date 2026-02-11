@@ -272,8 +272,8 @@
                     android:layout_height="wrap_content"
                     android:autofillHints=""
                     android:imeOptions="actionNext"
-                    android:importantForAutofill="no"
-                    android:inputType="number"
+                    android:importantForAutofill="auto"
+                    android:inputType="numberDecimal"
                     android:privateImeOptions="nm" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -289,11 +289,8 @@
                     android:id="@+id/etPackaging"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints=""
                     android:imeOptions="actionDone"
-                    android:importantForAutofill="no"
-                    android:inputType="number"
-                    android:privateImeOptions="nm" />
+                    android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
